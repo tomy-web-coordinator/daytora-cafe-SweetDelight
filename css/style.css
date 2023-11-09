@@ -1,0 +1,413 @@
+@charset "UTF-8";
+body {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #3c301e;
+}
+
+img {
+  width: 100%;
+}
+
+/* 共通クラス */
+.inner {
+  padding: 0 40px;
+}
+@media screen and (min-width: 768px) {
+  .inner {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading-l {
+  color: #fff;
+}
+
+.section-heading-main {
+  display: block;
+  font-size: 40px;
+}
+@media screen and (min-width: 768px) {
+  .section-heading-main {
+    font-size: 64px;
+  }
+}
+
+.section-heading-sub {
+  display: block;
+  font-size: 12px;
+}
+
+.sns-img {
+  width: 56px;
+}
+
+.page-top-wrapper {
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.page-top-wrapper .page-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px; /* この値はお好みで調整してください */
+  height: 60px; /* この値はお好みで調整してください */
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal .modal-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain; /* 画像の縦横比を保持 */
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(241, 238, 228, 0.25);
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+}
+.header .header-inner .header-logo {
+  width: 200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .header .header-inner .header-logo {
+    margin: 0;
+  }
+}
+.header .header-inner .header-nav {
+  margin-top: 10px;
+}
+.header .header-inner .header-nav .header-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .header .header-inner .header-nav .header-nav-list {
+    gap: 40px;
+  }
+}
+.header .header-inner .header-nav .header-nav-list .header-nav-link {
+  color: #ffffff;
+}
+.header .header-inner .header-nav .header-nav-list .header-nav-link:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+  .header .header-inner .header-nav .header-nav-list .header-nav-link {
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .header-inner {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 16px;
+  }
+}
+
+.drawer-menu {
+  display: none;
+  color: white;
+  font-size: 0.8em;
+  background-color: rgba(241, 238, 228, 0.2);
+}
+
+/* ファーストビュー */
+.fv-picture img {
+  width: 100%;
+}
+
+/* aboutセクション */
+.about {
+  padding: 40px 0;
+  background-color: #f1eee4;
+}
+.about .about-contents .about-text-contents {
+  margin-top: 20px;
+}
+.about .about-contents .about-text-contents .about-text {
+  font-size: 14px;
+  line-height: 2;
+}
+.about .about-contents .about-text-contents .about-text + .about-text {
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .about .about-contents .about-text-contents .about-text + .about-text {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about .about-contents .about-text-contents .about-text {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about .about-contents .about-text-contents {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about .about-contents .about-img {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about .about-contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 100px 0;
+  }
+}
+
+/* menuセクション */
+.menu {
+  background-color: #f1eee4;
+  padding: 80px 0;
+}
+.menu .menu-list .menu-item .menu-text-contents {
+  text-align: center;
+  padding: 16px 10px;
+}
+.menu .menu-list .menu-item .menu-text-contents .menu-name .menu-name-main {
+  display: block;
+  font-size: 18px;
+}
+.menu .menu-list .menu-item .menu-text-contents .menu-name .menu-name-sub {
+  display: block;
+  font-size: 12px;
+  color: #a98c5f;
+  margin-top: 8px;
+}
+.menu .menu-list .menu-item .menu-text-contents .menu-text {
+  font-size: 14px;
+  color: #a98c5f;
+  margin-top: 16px;
+}
+.menu .menu-list .menu-item + .menu-item {
+  margin-top: 62px;
+}
+@media screen and (min-width: 768px) {
+  .menu .menu-list .menu-item + .menu-item {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 0 0 100px;
+  }
+}
+
+/* shopセクション */
+.shop {
+  background-image: url(../img/sp/bg-shop.png);
+  background-position: center center;
+  background-size: cover;
+  padding: 80px 0;
+}
+.shop .shop-inner {
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .shop .shop-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+.shop .shop-inner .shop-contents .shop-text {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+}
+.shop .shop-inner .shop-contents .form {
+  margin-top: 40px;
+}
+.shop .shop-inner .shop-contents .form .form-input {
+  width: 100%;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  padding: 14px;
+}
+.shop .shop-inner .shop-contents .form .form-submit {
+  border-radius: 4px;
+  border: none;
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  display: block;
+  margin: 10px auto 0;
+  width: 120px;
+  padding: 12px 10px;
+  color: #fff;
+  background-color: #a98c5f;
+}
+@media screen and (min-width: 768px) {
+  .shop .shop-inner .shop-contents .form .form-submit:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shop .shop-inner .shop-contents .form .form-submit {
+    margin-top: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shop .shop-inner .shop-contents .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shop {
+    background-image: url(../img/bg-shop.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 60px 0;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: #3c301e;
+  text-align: center;
+  padding-top: 46px;
+  color: #fff;
+}
+.footer .footer-logo {
+  width: 200px;
+  margin: 0 auto;
+}
+.footer .footer-text {
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .footer .footer-text {
+    margin-top: 12px;
+  }
+}
+.footer .footer-nav-list {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+  padding: 0 20px;
+}
+.footer .footer-nav-list .footer-nav-link-text {
+  font-size: 12px;
+  margin-top: 12px;
+}
+@media screen and (min-width: 768px) {
+  .footer .footer-nav-list {
+    gap: 40px;
+  }
+}
+.footer .footer-copy-wrapper {
+  border-top: 1px solid rgba(241, 238, 228, 0.25);
+  padding: 12px;
+  margin-top: 46px;
+}
+.footer .footer-copy-wrapper .footer-copylight {
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .footer .footer-copy-wrapper .footer-copylight {
+    font-size: 13px;
+  }
+}
